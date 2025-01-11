@@ -35,7 +35,7 @@ Content Type
    •	Tags: A reference to taxonomy terms in the tags vocabulary.
 
 Controller
- •	URL: /api/content-filter
+ •	URL: /custom-content/filter
  •	Accepts query parameters:
    •	title: Filter content by title (partial match).
    •	tag: Filter content by tag names (comma-separated).
