@@ -4,6 +4,7 @@ Instructions:
  - Clone the git repository (git clone git@github.com:Hayk-web/technical-task.git)
  - Run the following commands:
    - lando start
+   - lando composer install
    - lando drush site:install --db-url=mysql://drupal10:drupal10@database/drupal10 -y
    - lando drush cr
 
