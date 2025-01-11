@@ -1,5 +1,13 @@
 Tech Task Description
 
+Instructions:
+ - Clone the git repository (git clone git@github.com:Hayk-web/technical-task.git)
+ - Run the following commands:
+   - lando start
+   - lando drush site:install --db-url=mysql://drupal10:drupal10@database/drupal10 -y
+   - lando drush cr
+
+
 The Tech task content filter module provides:
 1.	A custom content type (custom_content) with fields:
   •	Title: Standard Drupal title field.
