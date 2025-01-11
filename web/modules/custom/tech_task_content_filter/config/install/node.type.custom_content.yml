@@ -1,0 +1,11 @@
+uuid: eed6e59c-bbff-4ff2-9c93-2094695da485
+langcode: en
+status: true
+dependencies: {  }
+name: 'Custom Content'
+type: custom_content
+description: 'A custom content type with image, description, tags, and title.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

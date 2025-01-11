@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Provides custom functionality for the Tech Task Content Filter module.
+ *
+ * @package tech_task_content_filter
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function tech_task_content_filter_theme() {
+  return [
+    'recent_items' => [
+      'variables' => ['items' => []]
+    ],
+  ];
+}

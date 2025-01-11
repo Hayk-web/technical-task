@@ -1,0 +1,21 @@
+uuid: ddf8d3ce-1f24-4d6d-83fc-8459514d1148
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.custom_content
+id: node.custom_content.field_tags
+field_name: field_tags
+entity_type: node
+bundle: custom_content
+label: Tags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings: {  }
+field_type: entity_reference

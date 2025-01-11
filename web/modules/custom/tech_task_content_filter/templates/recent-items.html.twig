@@ -1,0 +1,19 @@
+<div class="projcard-container">
+  {% for item in items %}
+  <div class="projcard projcard-red">
+      <div class="projcard-innerbox">
+        <img class="projcard-img" src="{{ item.image }}" alt="{{ item.title }}" />
+        <div class="projcard-textbox">
+          <div class="projcard-title">{{ item.title }}</div>
+          <div class="projcard-bar"></div>
+          <div class="projcard-description">{{ item.description }}</div>
+          <div class="projcard-tagbox">
+            {% for tag in item.tags %}
+              <span class="projcard-tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+  </div>
+  {% endfor %}
+</div>

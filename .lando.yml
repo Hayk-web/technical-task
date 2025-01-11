@@ -1,0 +1,4 @@
+name: tech-task
+recipe: drupal10
+config:
+  webroot: web

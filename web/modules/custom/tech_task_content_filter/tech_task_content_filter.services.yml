@@ -1,0 +1,6 @@
+services:
+  tech_task_content_filter.content_filter_controller:
+    class: Drupal\tech_task_content_filter\Controller\ContentFilterController
+    arguments: ['@entity_type.manager']
+    tags:
+      - { name: controller.service_arguments }

@@ -1,0 +1,48 @@
+<?php
+
+use Drupal\taxonomy\Entity\Vocabulary;
+use Drupal\taxonomy\Entity\Term;
+
+
+/**
+ * Implements hook_install().
+ */
+function tech_task_content_filter_install() {
+  // Create test taxonomy terms for the tags vocabulary.
+  _tech_task_content_filter_create_test_terms();
+}
+
+/**
+ * Helper function to create test taxonomy terms for the tags vocabulary.
+ */
+function _tech_task_content_filter_create_test_terms() {
+  // Define test terms.
+  $test_terms = [
+    'Tag 1',
+    'Tag 2',
+    'Tag 3',
+  ];
+
+  // Ensure the vocabulary exists.
+  $vocabulary = Vocabulary::load('tags');
+  if ($vocabulary) {
+    foreach ($test_terms as $term_name) {
+      // Check if the term already exists to prevent duplicates.
+      $existing_terms = \Drupal::entityTypeManager()
+        ->getStorage('taxonomy_term')
+        ->loadByProperties([
+          'name' => $term_name,
+          'vid' => 'tags',
+        ]);
+
+      if (empty($existing_terms)) {
+        // Create the taxonomy term.
+        $term = Term::create([
+          'vid' => 'tags',
+          'name' => $term_name,
+        ]);
+        $term->save();
+      }
+    }
+  }
+}

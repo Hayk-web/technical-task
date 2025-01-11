@@ -1,0 +1,10 @@
+.idea
+.gitattributes
+.editorconfig
+*.sql
+*.gz
+*.zip
+/vendor
+/web/core
+/web/modules/contrib
+/web/sites/default/files

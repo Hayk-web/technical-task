@@ -1,0 +1,8 @@
+tech_task_content_filter.filter:
+  path: '/custom-content/filter'
+  defaults:
+    _controller: '\Drupal\tech_task_content_filter\Controller\ContentFilterController::filter'
+    _title: 'Filter Custom Content'
+  requirements:
+    _permission: 'access content'
+  methods: [GET]

@@ -1,0 +1,8 @@
+name: Technical Task General
+description: The module is designed to handle technical task.
+type: module
+core_version_requirement: ^10 || ^11
+package: Tech Task
+dependencies:
+  - node
+  - taxonomy
